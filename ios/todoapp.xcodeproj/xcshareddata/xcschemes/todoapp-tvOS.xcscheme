@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "indicamscan-tvOS.app"
-               BlueprintName = "indicamscan-tvOS"
-               ReferencedContainer = "container:indicamscan.xcodeproj">
+               BuildableName = "todoapp-tvOS.app"
+               BlueprintName = "todoapp-tvOS"
+               ReferencedContainer = "container:todoapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "indicamscan-tvOSTests.xctest"
-               BlueprintName = "indicamscan-tvOSTests"
-               ReferencedContainer = "container:indicamscan.xcodeproj">
+               BuildableName = "todoapp-tvOSTests.xctest"
+               BlueprintName = "todoapp-tvOSTests"
+               ReferencedContainer = "container:todoapp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "indicamscan-tvOS.app"
-            BlueprintName = "indicamscan-tvOS"
-            ReferencedContainer = "container:indicamscan.xcodeproj">
+            BuildableName = "todoapp-tvOS.app"
+            BlueprintName = "todoapp-tvOS"
+            ReferencedContainer = "container:todoapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "indicamscan-tvOS.app"
-            BlueprintName = "indicamscan-tvOS"
-            ReferencedContainer = "container:indicamscan.xcodeproj">
+            BuildableName = "todoapp-tvOS.app"
+            BlueprintName = "todoapp-tvOS"
+            ReferencedContainer = "container:todoapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

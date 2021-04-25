@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'indicamscan' do
+target 'todoapp' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'indicamscanTests' do
+  target 'todoappTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'indicamscan' do
   end
 end
 
-target 'indicamscan-tvOS' do
-  # Pods for indicamscan-tvOS
+target 'todoapp-tvOS' do
+  # Pods for todoapp-tvOS
 
-  target 'indicamscan-tvOSTests' do
+  target 'todoapp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
