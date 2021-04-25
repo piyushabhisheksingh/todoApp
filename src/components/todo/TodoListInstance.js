@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, TouchableOpacity, } from 'react-native';
+import { TextInput, View, Text, TouchableOpacity, Platform, } from 'react-native';
 import { connect } from 'react-redux';
 import styles from './styles'
 import Icon from 'react-native-vector-icons/Entypo'
@@ -134,7 +134,7 @@ class TodoListInstance extends Component {
                             <Favorite size={24} color={colors.maroon}
                                 name={isFavourites ? "star-sharp" : "star-outline"}></Favorite>
                         </TouchableOpacity>}
-                        < TouchableOpacity onPress={this.onMenuClicked}>
+                        < TouchableOpacity style={{ marginLeft: normalize(8) }} onPress={this.onMenuClicked}>
                             <Icon size={24} color={colors.darkGrey + opacity.sixtyPercent}
                                 name="dots-three-vertical"></Icon>
                         </TouchableOpacity>
@@ -170,7 +170,7 @@ function CustomMenu(props) {
     const editAction = reference && reference[openMenuId.toString()] ? reference[openMenuId.toString()].edit : () => { };
     const deleteAction = reference && reference[openMenuId.toString()] ? reference[openMenuId.toString()].delete : () => { };
     const completedAction = reference && reference[openMenuId.toString()] ? reference[openMenuId.toString()].completed : () => { };
-    const pos = reference && reference[openMenuId.toString()] ? reference[openMenuId.toString()].getPos() - normalize(262) : 0;
+    const pos = reference && reference[openMenuId.toString()] ? reference[openMenuId.toString()].getPos() - (Platform.OS == 'ios' ? normalize(262) : normalize(242)) : 0;
     const { menuWrapper, menuListItem, divider } = styles;
     const { listText } = globalStyles
     const { COMPLETED, EDIT, DELETE, ALL } = labels;
