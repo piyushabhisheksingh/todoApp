@@ -56,6 +56,8 @@ class TodoList extends Component {
                 ></Menu>
 
                 <KeyboardAwareFlatList
+                    removeClippedSubviews={false}
+                    keyboardDismissMode={"none"}
                     onScrollBeginDrag={this.close}
                     onMomentumScrollBegin={this.close}
                     ListFooterComponent={<View style={{ marginBottom: normalize(40) }}></View>}
