@@ -1,0 +1,7 @@
+export const SELECT_FILTER = "SELECT_FILTER";
+export const ADD_NEW = "ADD_NEW"
+export const MENU_CLICKED = "MENU_CLICKED"
+export const FAVORITE_CLICKED = "FAVORITE_CLICKED"
+export const DELETE_ITEM = "DELETE_ITEM"
+export const EDIT_ITEM = "EDIT_ITEM"
+export const SET_COMPLETED = "SET_COMPLETED"

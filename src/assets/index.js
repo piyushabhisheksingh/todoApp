@@ -1,9 +1,8 @@
 import colors from './colors';
-import * as constants from './constants';
-import * as globalStyles from './global.styles';
-import * as labels from './labels';
-import * as opacity from './opacity';
-
+import constants from './constants';
+import globalStyles from './global.styles';
+import labels from './labels';
+import opacity from './opacity';
 
 export {
     colors,

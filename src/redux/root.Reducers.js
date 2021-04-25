@@ -1,15 +1,11 @@
 import { combineReducers } from 'redux';
-import homeReducer from './home/home.reducers';
+import todoReducer from './todo/todo.reducers';
 
 const appReducer = combineReducers({
-    home: homeReducer,
+    todo: todoReducer,
 })
 
 const allReducers = (state, action) => {
-    /*if (action.type === 'LOGOUT_SUCCESS') {
-        state = undefined;
-    }*/
-
     return appReducer(state, action)
 }
 

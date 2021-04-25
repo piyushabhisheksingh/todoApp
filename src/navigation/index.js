@@ -6,7 +6,9 @@ import screens from './screens';
 import { colors } from '../assets'
 import styles from './style';
 
-import { HomeScreen } from '../pages'
+
+import Todo from '../components/todo'
+
 
 const Stack = createStackNavigator();
 
@@ -19,7 +21,7 @@ function Root() {
       <SafeAreaView style={styles.root}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name={screens.HomeScreen} component={HomeScreen} options={{ headerShown: false, gestureEnabled: false }} />
+            <Stack.Screen name={screens.TodoScreen} component={Todo} options={{ headerShown: false, gestureEnabled: false }} />
           </Stack.Navigator>
         </NavigationContainer >
       </SafeAreaView>

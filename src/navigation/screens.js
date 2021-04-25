@@ -1,4 +1,4 @@
 
 export default {
-    HomeScreen: "HomeScreen",
+    TodoScreen: "Todo",
 }
