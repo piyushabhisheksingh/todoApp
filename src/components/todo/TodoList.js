@@ -10,7 +10,7 @@ import { Menu } from './TodoListInstance'
 import { menuClicked } from '../../redux/todo/todo.actions'
 import { KeyboardAwareFlatList } from 'react-native-keyboard-aware-scroll-view'
 
-const { TODO_FLATLIST } = constants;
+
 
 class TodoList extends Component {
     constructor(props) {
@@ -47,6 +47,7 @@ class TodoList extends Component {
     render() {
         const { todoListStyle } = styles;
         const { todoList } = this.props;
+        const { TODO_FLATLIST } = constants;
         return (
             <SafeAreaView style={{ flex: 1, paddingBottom: normalize(16), overflow: 'visible' }}>
 
