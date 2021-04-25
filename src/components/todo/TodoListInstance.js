@@ -5,7 +5,7 @@ import styles from './styles'
 import Icon from 'react-native-vector-icons/Entypo'
 import Favorite from 'react-native-vector-icons/Ionicons'
 import { colors, opacity, globalStyles, labels } from '../../assets';
-import { favouriteClicked, menuClicked, setCompleted, editItem, deleteItem } from '../../redux/todo/todo.actions'
+import { favouriteClicked, menuClicked, setCompleted, editItem, deleteItem, saveState } from '../../redux/todo/todo.actions'
 import normalize from '../../utls/normalize';
 
 
@@ -37,11 +37,12 @@ class TodoListInstance extends Component {
     }
 
     onFavoriteClicked = () => {
-        const { favouriteClicked } = this.props;
+        const { favouriteClicked, saveState } = this.props;
         let todoItem = Object.assign({}, this.state.todoItem);
         todoItem.isFavourites = !todoItem.isFavourites
         this.setState({ todoItem: todoItem })
         favouriteClicked(todoItem.id);
+        saveState();
 
     }
     onMenuClicked = async () => {
@@ -61,16 +62,18 @@ class TodoListInstance extends Component {
     }
     delete = () => {
         const { todoItem } = this.state;
-        const { deleteItem } = this.props;
+        const { deleteItem, saveState } = this.props;
         deleteItem(todoItem.id)
+        saveState()
     }
     completed = () => {
-        const { setCompleted } = this.props;
+        const { setCompleted, saveState } = this.props;
         let todoItem = Object.assign({}, this.state.todoItem);
         todoItem.isCompleted = true
         todoItem.isFavourites = false
         this.setState({ todoItem: todoItem })
         setCompleted(todoItem.id)
+        saveState()
     }
     onChangeText = (text) => {
         let todoItem = Object.assign({}, this.state.todoItem);
@@ -78,10 +81,11 @@ class TodoListInstance extends Component {
         this.setState({ todoItem: todoItem })
     }
     onBlur = () => {
-        const { editItem } = this.props;
+        const { editItem, saveState } = this.props;
         const { todoItem } = this.state;
         editItem({ id: todoItem.id, todoText: todoItem.todoText })
         this.setState({ editable: false })
+        saveState()
     }
 
     layout = () => {
@@ -146,7 +150,8 @@ const mapDispatchToProps = {
     menuClicked,
     deleteItem,
     setCompleted,
-    editItem
+    editItem,
+    saveState
 }
 
 const mapStateToProps = (state) => ({

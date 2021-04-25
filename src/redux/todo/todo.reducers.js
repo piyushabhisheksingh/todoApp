@@ -71,6 +71,12 @@ const todoReducer = (state = appState.todo, action) => {
                 isMenuOpen: false
             }
         }
+        case types.UPDATE_STATE: {
+            return {
+                ...state,
+                todoList: action.list
+            }
+        }
         default:
             return state
     }

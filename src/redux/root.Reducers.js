@@ -9,4 +9,5 @@ const allReducers = (state, action) => {
     return appReducer(state, action)
 }
 
+
 export default allReducers;

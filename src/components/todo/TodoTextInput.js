@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { TextInput, View, Text, TouchableOpacity, Keyboard } from 'react-native';
 import styles from './styles'
 import { globalStyles, labels } from '../../assets'
-import { addNewAction } from '../../redux/todo/todo.actions'
+import { addNewAction, saveState } from '../../redux/todo/todo.actions'
 import { connect } from 'react-redux';
 
 
@@ -39,11 +39,12 @@ class TodoTextInput extends Component {
         this.debounce = setTimeout(this.callAddNewAction, 200)
     }
     callAddNewAction = () => {
-        const { addNewAction } = this.props;
+        const { addNewAction, saveState } = this.props;
         const { todoText } = this.state;
         if (todoText.length) {
             addNewAction(todoText)
             this.setState({ todoText: "" })
+            saveState();
         }
     }
     render() {
@@ -73,6 +74,7 @@ class TodoTextInput extends Component {
 }
 const mapDispatchToProps = {
     addNewAction,
+    saveState
 }
 
 export default connect(null, mapDispatchToProps)(TodoTextInput);

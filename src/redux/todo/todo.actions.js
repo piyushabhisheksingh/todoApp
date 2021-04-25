@@ -48,6 +48,18 @@ export const setCompleted = (payload) => {
     }
 }
 
+export const saveState = () => {
+    return {
+        type: types.SAVE_STATE,
+    }
+}
+
+export const getStateAction = () => {
+    return {
+        type: types.GET_STATE,
+    }
+}
+
 
 
 

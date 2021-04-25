@@ -3,12 +3,20 @@ import { View, Keyboard } from 'react-native';
 import { TodoHeader, TodoTextInput, TodoTabNavigation, TodoList } from '.'
 import styles from './styles'
 import { connect } from 'react-redux';
-import { menuClicked } from '../../redux/todo/todo.actions'
+import { menuClicked, getStateAction } from '../../redux/todo/todo.actions'
 
 
 
 
 class Todo extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount = () => {
+        const { getStateAction } = this.props;
+        getStateAction();
+    }
 
     shouldComponentUpdate() {
         return false
@@ -34,6 +42,7 @@ class Todo extends Component {
 
 const mapDispatchToProps = {
     menuClicked,
+    getStateAction
 }
 
 const mapStateToProps = (state) => ({
