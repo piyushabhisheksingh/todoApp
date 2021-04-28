@@ -22,7 +22,7 @@ class TodoList extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        if (nextProps.todoList.length != this.props.todoList) {
+        if (nextProps.todoList.length != this.props.todoList.length) {
             return true
         } else {
             return false
